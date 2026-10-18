@@ -1,0 +1,834 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMI: porównanie sklepów</title>
+<style>
+:root{--bg:#f6f5f2;--fg:#1d1d1f;--mut:#6b6b70;--card:#fff;--line:#e3e1dc;--a:#b4232a;--b:#2b5cab;--pre:#8a5a00}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececee;--mut:#9a9aa2;--card:#1e1e22;--line:#303036;--a:#e0565c;--b:#6b9be8;--pre:#e0b050}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{padding:20px 16px 8px;max-width:1500px;margin:auto}h1{margin:0 0 4px;font-size:24px}header p{margin:4px 0;color:var(--mut)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px;display:flex;gap:6px;overflow-x:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--fg);border:1px solid var(--line);border-radius:99px;padding:4px 10px;background:var(--card)}nav small{color:var(--mut)}
+main{max-width:1500px;margin:auto;padding:0 16px 40px}section{scroll-margin-top:56px}h2{margin:28px 0 10px;font-size:20px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:760px){.cmp{grid-template-columns:1fr}}
+.colh{font-weight:700;font-size:15px;padding:6px 0 8px;border-bottom:3px solid var(--a);margin-bottom:10px}.colh.rb{border-color:var(--b)}.colh span{font-weight:400;color:var(--mut);font-size:13px;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.ph{display:block;aspect-ratio:1;background:#fff}.ph img{width:100%;height:100%;object-fit:contain;display:block}
+.body{padding:8px 10px 10px;display:flex;flex-direction:column;gap:4px;flex:1}h3{margin:0;font-size:14px}
+.price b{font-size:15px}.usd{color:var(--mut);font-size:12px}.pre{color:var(--pre);font-size:12px;font-weight:600}
+.comp{font-size:12px}.comp span,.cl{color:var(--mut);font-size:12px}
+.sws{display:flex;flex-wrap:wrap;gap:4px}.sw{border:1px solid var(--line);background:none;padding:0;border-radius:6px;cursor:pointer;width:52px;color:var(--fg)}
+.sw img{width:50px;height:50px;object-fit:cover;display:block;border-radius:5px 5px 0 0}.sw span{display:block;font-size:9px;line-height:1.15;padding:2px;word-break:break-word}.sw.on{outline:2px solid var(--fg)}
+.links{margin-top:auto;padding-top:6px;font-size:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}.links a{color:var(--b)}.n{color:var(--mut);margin-left:auto}
+.none{color:var(--mut);font-style:italic}
+.rd{max-width:1500px;margin:8px auto 0;padding:0 16px}.rd details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.rd summary{cursor:pointer;font-weight:700;font-size:15px}.rd .g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}@media(max-width:760px){.rd .g{grid-template-columns:1fr}}
+.rd h4{margin:6px 0 4px}.rd ul{margin:4px 0;padding-left:18px}.rd li{margin:2px 0}.rd q{font-style:italic}.rd .src{color:var(--mut);font-size:12px}.rd table{border-collapse:collapse;margin:6px 0}.rd td,.rd th{border:1px solid var(--line);padding:4px 8px;text-align:left}
+</style></head><body>
+<header><h1>AMI: AMI Paris (TOPAMI) vs RepsBrothers</h1>
+<p>AMI Paris: 88 produktów, ceny w CNY (≈ $ po kursie 7.1 CNY/$). RepsBrothers: 21 produktów, ceny „P”, najpewniej w USD (sprzedawca tego nie podaje).</p>
+<p>Kliknięcie zdjęcia otwiera album na Yupoo. Kliknięcie koloru podmienia zdjęcie główne. Skład pochodzi z tytułu albo opisu albumu, jeśli sprzedawca go podał. Kolory oznaczono ręcznie na podstawie zdjęć z albumu.</p></header>
+<div class="rd"><details open><summary>Co pisze Reddit (stan 16.10.2026)</summary>
+<p><b>Wynik:</b> TOPAMI (sklep AMI Paris) jest wymieniany częściej, ale w bezpośrednich porównaniach od końca 2024 częściej wygrywa RepsBrothers (lepsze serce i krój). Najczęstsza opinia: oba są najlepsze do AMI, ale jakość zależy od partii.</p>
+<table><tr><th></th><th>TOPAMI (AMI Paris)</th><th>RepsBrothers</th></tr>
+<tr><td>Posty o AMI</td><td>ok. 460</td><td>ok. 180</td></tr>
+<tr><td>Komentarze polecające / krytykujące</td><td>ok. 40 / 9</td><td>ok. 15 / 1</td></tr>
+<tr><td>Aktywność</td><td>2022 – 10.2026</td><td>2023 – 10.2026</td></tr></table>
+<div class="g"><div><h4>TOPAMI</h4><ul>
+<li>+ największy wybór (alpaka, kardigany, nowe kolekcje), dużo pozytywnych QC</li>
+<li>− zarzut odsprzedaży z 1688 i spadku jakości (10.2024, wątek 231 pkt)</li>
+<li>− krzywe serce w części QC, mechacenie wełny, niekonsekwentne rozmiary</li>
+<li>− słaby kontakt, anulowane zamówienie (11.2025), paczka za 333 $ niedostarczona (02.2026)</li></ul>
+<p><q>topami is like a tier lower but has a wider selection</q> <span class="src">r/DesignerReps, 03.2024</span></p></div>
+<div><h4>RepsBrothers</h4><ul>
+<li>+ dokładniejsze serce i krój, merynos, sprzedawca porównuje z oryginałem i odpowiada w wątkach</li>
+<li>− nieco drożej, Yupoo zamknięte w połowie 2025 (powrót 08–09.2025)</li>
+<li>− wątek „lower quality than before” (12.2025), nierozstrzygnięty</li>
+<li>− brak części kolorów</li></ul>
+<p><q>if RB has it go with him, otherwise go with topami. both are great, but RB has a better heart.</q> <span class="src">r/FashionReps, 11.2024</span></p></div></div>
+<p class="src">Ograniczenia: brak komentarzy z r/FashionReps (brak dumpu), sentyment klasyfikowany ręcznie, sprzedawcy sami komentują w wątkach. Pełna notatka z cytatami i linkami: vault, „AMI repliki — TOPAMI vs RepsBrothers, opinie z Reddita”.</p>
+</details></div>
+<nav><a href="#c0">Swetry i kardigany <small>27/9</small></a><a href="#c1">Bluzy z kapturem <small>16/3</small></a><a href="#c2">Bluzy bez kaptura <small>12/2</small></a><a href="#c3">T-shirty <small>12/3</small></a><a href="#c4">Polo <small>4/1</small></a><a href="#c5">Koszule <small>6/0</small></a><a href="#c6">Kurtki <small>3/0</small></a><a href="#c7">Spodnie i szorty <small>5/0</small></a><a href="#c8">Czapki i szaliki <small>3/3</small></a></nav><main><section id="c0"><h2>Swetry i kardigany</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>27 prod. · ≈ 42–70 $</span></div><div class="grid"><article class="card" data-usd="42">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172735563?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_b7747d522d.jpg" alt="Kardigan z małym logo, morelowy" loading="lazy"></a>
+<div class="body"><h3>Kardigan z małym logo, morelowy</h3>
+<div class="price"><b>300 CNY</b> <span class="usd">≈ 42 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_b7747d522d.jpg" title="beżowy"><img src="img/amiparis_b7747d522d.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_d7355ef0.jpg" title="granatowy"><img src="img/amiparis_d7355ef0.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_4789f6e7.jpg" title="grafitowy"><img src="img/amiparis_4789f6e7.jpg" alt="grafitowy" loading="lazy"><span>grafitowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172735563?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700114061578" target="_blank" rel="noopener">Taobao</a> <span class="n">29 zdjęć</span></div></div></article><article class="card" data-usd="42">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172989660?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_a12328bf.jpg" alt="Kardigan czarny z małym logo" loading="lazy"></a>
+<div class="body"><h3>Kardigan czarny z małym logo</h3>
+<div class="price"><b>300 CNY</b> <span class="usd">≈ 42 $</span></div>
+
+<div class="comp"><span>Skład:</span> mieszanka z kaszmirem</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_a12328bf.jpg" title="granatowy melanż"><img src="img/amiparis_a12328bf.jpg" alt="granatowy melanż" loading="lazy"><span>granatowy melanż</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172989660?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=756753317121" target="_blank" rel="noopener">Taobao</a> <span class="n">34 zdjęć</span></div></div></article><article class="card" data-usd="59">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172694825?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_aceb207f.jpg" alt="Sweter z małym logo (klasyczny)" loading="lazy"></a>
+<div class="body"><h3>Sweter z małym logo (klasyczny)</h3>
+<div class="price"><b>420 CNY</b> <span class="usd">≈ 59 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/amiparis_aceb207f.jpg" title="czarny, czerwone logo"><img src="img/amiparis_aceb207f.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_079bb7d9.jpg" title="granatowy"><img src="img/amiparis_079bb7d9.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_291218e4.jpg" title="grafitowy"><img src="img/amiparis_291218e4.jpg" alt="grafitowy" loading="lazy"><span>grafitowy</span></button><button class="sw" data-src="img/amiparis_8062dbed.jpg" title="beżowy"><img src="img/amiparis_8062dbed.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_2e47830a.jpg" title="brązowoszary (taupe)"><img src="img/amiparis_2e47830a.jpg" alt="brązowoszary (taupe)" loading="lazy"><span>brązowoszary (taupe)</span></button><button class="sw" data-src="img/amiparis_65ca348a.jpg" title="szary"><img src="img/amiparis_65ca348a.jpg" alt="szary" loading="lazy"><span>szary</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172694825?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=755588684718" target="_blank" rel="noopener">Taobao</a> <span class="n">54 zdjęć</span></div></div></article><article class="card" data-usd="59">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/214922624?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_6b959884.jpg" alt="Sweter z wypukłymi literami" loading="lazy"></a>
+<div class="body"><h3>Sweter z wypukłymi literami</h3>
+<div class="price"><b>420 CNY</b> <span class="usd">≈ 59 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_6b959884.jpg" title="taupe/brązowoszary"><img src="img/amiparis_6b959884.jpg" alt="taupe/brązowoszary" loading="lazy"><span>taupe/brązowoszary</span></button><button class="sw" data-src="img/amiparis_47a0752f.jpg" title="ecru"><img src="img/amiparis_47a0752f.jpg" alt="ecru" loading="lazy"><span>ecru</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/214922624?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1013585612547" target="_blank" rel="noopener">Taobao</a> <span class="n">30 zdjęć</span></div></div></article><article class="card" data-usd="65">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172688187?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_b04bc9f4.jpg" alt="Kardigan z małym logo" loading="lazy"></a>
+<div class="body"><h3>Kardigan z małym logo</h3>
+<div class="price"><b>460 CNY</b> <span class="usd">≈ 65 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/amiparis_8f3b5460.jpg" title="czarny, czerwone logo"><img src="img/amiparis_8f3b5460.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_b04bc9f4.jpg" title="granatowy"><img src="img/amiparis_b04bc9f4.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_583f923d.jpg" title="grafitowy"><img src="img/amiparis_583f923d.jpg" alt="grafitowy" loading="lazy"><span>grafitowy</span></button><button class="sw" data-src="img/amiparis_f580fc22.jpg" title="niebieski melanż"><img src="img/amiparis_f580fc22.jpg" alt="niebieski melanż" loading="lazy"><span>niebieski melanż</span></button><button class="sw" data-src="img/amiparis_1e634438.jpg" title="niebieski"><img src="img/amiparis_1e634438.jpg" alt="niebieski" loading="lazy"><span>niebieski</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172688187?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=765962784140" target="_blank" rel="noopener">Taobao</a> <span class="n">79 zdjęć</span></div></div></article><article class="card" data-usd="65">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173180455?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_b8f4dd69.jpg" alt="Kardigan z dużym logo" loading="lazy"></a>
+<div class="body"><h3>Kardigan z dużym logo</h3>
+<div class="price"><b>460 CNY</b> <span class="usd">≈ 65 $</span></div>
+
+<div class="comp"><span>Skład:</span> kaszmir (wg tytułu)</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_b8f4dd69.jpg" title="granatowy, białe logo"><img src="img/amiparis_b8f4dd69.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173180455?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=750726460889" target="_blank" rel="noopener">Taobao</a> <span class="n">34 zdjęć</span></div></div></article><article class="card" data-usd="65">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/177499351?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_8fe2fb6b.jpg" alt="Sweter z merynosa z dużym logo" loading="lazy"></a>
+<div class="body"><h3>Sweter z merynosa z dużym logo</h3>
+<div class="price"><b>460 CNY</b> <span class="usd">≈ 65 $</span></div>
+
+<div class="comp"><span>Skład:</span> wełna merino</div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_8fe2fb6b.jpg" title="taupe/szarobeżowy, białe serce"><img src="img/amiparis_8fe2fb6b.jpg" alt="taupe/szarobeżowy, białe serce" loading="lazy"><span>taupe/szarobeżowy, białe serce</span></button><button class="sw" data-src="img/amiparis_0e64e2a6.jpg" title="błękitny, białe serce"><img src="img/amiparis_0e64e2a6.jpg" alt="błękitny, białe serce" loading="lazy"><span>błękitny, białe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/177499351?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1073808684120" target="_blank" rel="noopener">Taobao</a> <span class="n">86 zdjęć</span></div></div></article><article class="card" data-usd="65">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/218159570?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_d1d0962c.jpg" alt="Sweter z dużym logo, wersja poprawiona" loading="lazy"></a>
+<div class="body"><h3>Sweter z dużym logo, wersja poprawiona</h3>
+<div class="price"><b>460 CNY</b> <span class="usd">≈ 65 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_d1d0962c.jpg" title="czarny, czerwone serce"><img src="img/amiparis_d1d0962c.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_eb8b8c71.jpg" title="granatowy, czerwone serce"><img src="img/amiparis_eb8b8c71.jpg" alt="granatowy, czerwone serce" loading="lazy"><span>granatowy, czerwone serce</span></button><button class="sw" data-src="img/amiparis_05e00cbb.jpg" title="kremowy, bordowe serce"><img src="img/amiparis_05e00cbb.jpg" alt="kremowy, bordowe serce" loading="lazy"><span>kremowy, bordowe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/218159570?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=744355209575" target="_blank" rel="noopener">Taobao</a> <span class="n">57 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172978761?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_465b2749.jpg" alt="Sweter z dużym białym logo" loading="lazy"></a>
+<div class="body"><h3>Sweter z dużym białym logo</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> kaszmir (wg tytułu)</div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_465b2749.jpg" title="granatowy, białe logo"><img src="img/amiparis_465b2749.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button><button class="sw" data-src="img/amiparis_ddc7af90.jpg" title="czerwony, białe logo"><img src="img/amiparis_ddc7af90.jpg" alt="czerwony, białe logo" loading="lazy"><span>czerwony, białe logo</span></button><button class="sw" data-src="img/amiparis_0ca179ee.jpg" title="niebieski kobaltowy, białe logo"><img src="img/amiparis_0ca179ee.jpg" alt="niebieski kobaltowy, białe logo" loading="lazy"><span>niebieski kobaltowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172978761?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=760660812445" target="_blank" rel="noopener">Taobao</a> <span class="n">65 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172985365?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_54e8dd11.jpg" alt="Sweter szary z dużym czarnym sercem" loading="lazy"></a>
+<div class="body"><h3>Sweter szary z dużym czarnym sercem</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_54e8dd11.jpg" title="lawendowoszary, czarne logo"><img src="img/amiparis_54e8dd11.jpg" alt="lawendowoszary, czarne logo" loading="lazy"><span>lawendowoszary, czarne logo</span></button><button class="sw" data-src="img/amiparis_3e0933a0.jpg" title="szary, czarne logo"><img src="img/amiparis_3e0933a0.jpg" alt="szary, czarne logo" loading="lazy"><span>szary, czarne logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172985365?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=758377328120" target="_blank" rel="noopener">Taobao</a> <span class="n">36 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172986627?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_de624121.jpg" alt="Golf z dużym białym logo" loading="lazy"></a>
+<div class="body"><h3>Golf z dużym białym logo</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_de624121.jpg" title="czarny, białe logo"><img src="img/amiparis_de624121.jpg" alt="czarny, białe logo" loading="lazy"><span>czarny, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172986627?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=757506330214" target="_blank" rel="noopener">Taobao</a> <span class="n">30 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/185471278?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_b7923f24.jpg" alt="Sweter z alpaki" loading="lazy"></a>
+<div class="body"><h3>Sweter z alpaki</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> alpaka</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_b7923f24.jpg" title="grafitowy, białe serce"><img src="img/amiparis_b7923f24.jpg" alt="grafitowy, białe serce" loading="lazy"><span>grafitowy, białe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/185471278?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=901208642879" target="_blank" rel="noopener">Taobao</a> <span class="n">31 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/214318780?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_aa8ae3cc.jpg" alt="Sweter z kołnierzem polo, motyw chmur" loading="lazy"></a>
+<div class="body"><h3>Sweter z kołnierzem polo, motyw chmur</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_aa8ae3cc.jpg" title="grafitowy, białe serce"><img src="img/amiparis_aa8ae3cc.jpg" alt="grafitowy, białe serce" loading="lazy"><span>grafitowy, białe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/214318780?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=999417880086" target="_blank" rel="noopener">Taobao</a> <span class="n">30 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/218158664?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_1abeb44c.jpg" alt="Kardigan (2024)" loading="lazy"></a>
+<div class="body"><h3>Kardigan (2024)</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_1abeb44c.jpg" title="czarny, czerwone serce"><img src="img/amiparis_1abeb44c.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_102a89da.jpg" title="biały, czerwone serce"><img src="img/amiparis_102a89da.jpg" alt="biały, czerwone serce" loading="lazy"><span>biały, czerwone serce</span></button><button class="sw" data-src="img/amiparis_18f50bf4.jpg" title="granatowy, czerwone serce"><img src="img/amiparis_18f50bf4.jpg" alt="granatowy, czerwone serce" loading="lazy"><span>granatowy, czerwone serce</span></button><button class="sw" data-src="img/amiparis_7cbd4a74.jpg" title="grafitowy, czerwone serce"><img src="img/amiparis_7cbd4a74.jpg" alt="grafitowy, czerwone serce" loading="lazy"><span>grafitowy, czerwone serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/218158664?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=862397430793" target="_blank" rel="noopener">Taobao</a> <span class="n">48 zdjęć</span></div></div></article><article class="card" data-usd="69">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/187204716?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_4fa7778d.jpg" alt="Kardigan z alpaki na guziki" loading="lazy"></a>
+<div class="body"><h3>Kardigan z alpaki na guziki</h3>
+<div class="price"><b>490 CNY</b> <span class="usd">≈ 69 $</span></div>
+
+<div class="comp"><span>Skład:</span> alpaka</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_4fa7778d.jpg" title="taupe/szarobrązowy, białe serce"><img src="img/amiparis_4fa7778d.jpg" alt="taupe/szarobrązowy, białe serce" loading="lazy"><span>taupe/szarobrązowy, białe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/187204716?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=901676565223" target="_blank" rel="noopener">Taobao</a> <span class="n">27 zdjęć</span></div></div></article><article class="card" data-usd="70">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/212459734?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_14375125.jpg" alt="Sweter z alpaki z motywem chmur (2025)" loading="lazy"></a>
+<div class="body"><h3>Sweter z alpaki z motywem chmur (2025)</h3>
+<div class="price"><b>500 CNY</b> <span class="usd">≈ 70 $</span></div>
+
+<div class="comp"><span>Skład:</span> alpaka</div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_14375125.jpg" title="szaroniebieski"><img src="img/amiparis_14375125.jpg" alt="szaroniebieski" loading="lazy"><span>szaroniebieski</span></button><button class="sw" data-src="img/amiparis_5232e5d1.jpg" title="jasnoniebieski"><img src="img/amiparis_5232e5d1.jpg" alt="jasnoniebieski" loading="lazy"><span>jasnoniebieski</span></button><button class="sw" data-src="img/amiparis_331bba46.jpg" title="szary"><img src="img/amiparis_331bba46.jpg" alt="szary" loading="lazy"><span>szary</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/212459734?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=993380137528" target="_blank" rel="noopener">Taobao</a> <span class="n">41 zdjęć</span></div></div></article><article class="card" data-usd="70">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/218161625?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_2148c7d2.jpg" alt="Kardigan z motywem chmur na guziki (2026)" loading="lazy"></a>
+<div class="body"><h3>Kardigan z motywem chmur na guziki (2026)</h3>
+<div class="price"><b>500 CNY</b> <span class="usd">≈ 70 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_2148c7d2.jpg" title="brązowy, białe logo"><img src="img/amiparis_2148c7d2.jpg" alt="brązowy, białe logo" loading="lazy"><span>brązowy, białe logo</span></button><button class="sw" data-src="img/amiparis_99aa8842.jpg" title="błękitny, białe logo"><img src="img/amiparis_99aa8842.jpg" alt="błękitny, białe logo" loading="lazy"><span>błękitny, białe logo</span></button><button class="sw" data-src="img/amiparis_02cf3b2332.jpg" title="szary, białe logo"><img src="img/amiparis_02cf3b2332.jpg" alt="szary, białe logo" loading="lazy"><span>szary, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/218161625?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1035740103631" target="_blank" rel="noopener">Taobao</a> <span class="n">42 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/177503305?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_3f49bb30.jpg" alt="Sweter stalowoniebieski" loading="lazy"></a>
+<div class="body"><h3>Sweter stalowoniebieski</h3>
+<div class="price"><b>brak ceny</b> </div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_3f49bb30.jpg" title="jasnoszaroniebieski, czarne serce"><img src="img/amiparis_3f49bb30.jpg" alt="jasnoszaroniebieski, czarne serce" loading="lazy"><span>jasnoszaroniebieski, czarne serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/177503305?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=857268454473" target="_blank" rel="noopener">Taobao</a> <span class="n">46 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/179836414?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_391df462.jpg" alt="Sweter z dużym czerwonym logo (2024)" loading="lazy"></a>
+<div class="body"><h3>Sweter z dużym czerwonym logo (2024)</h3>
+<div class="price"><b>brak ceny</b> </div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_5e35dc08.jpg" title="grafitowy, czerwone serce"><img src="img/amiparis_5e35dc08.jpg" alt="grafitowy, czerwone serce" loading="lazy"><span>grafitowy, czerwone serce</span></button><button class="sw" data-src="img/amiparis_391df462.jpg" title="czarny, czerwone serce"><img src="img/amiparis_391df462.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_27cdf03b.jpg" title="granatowy, czerwone serce"><img src="img/amiparis_27cdf03b.jpg" alt="granatowy, czerwone serce" loading="lazy"><span>granatowy, czerwone serce</span></button><button class="sw" data-src="img/amiparis_166f7e09.jpg" title="ecru, czerwone serce"><img src="img/amiparis_166f7e09.jpg" alt="ecru, czerwone serce" loading="lazy"><span>ecru, czerwone serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/179836414?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=854777755193" target="_blank" rel="noopener">Taobao</a> <span class="n">80 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226125406?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_84cbf766ed.jpg" alt="Sweter gładki ze średnim białym logo (2026)" loading="lazy"></a>
+<div class="body"><h3>Sweter gładki ze średnim białym logo (2026)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~kwiecień</div>
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_84cbf766ed.jpg" title="granatowy, białe logo"><img src="img/amiparis_84cbf766ed.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button><button class="sw" data-src="img/amiparis_28901c407d.jpg" title="beżowy (camel), białe logo"><img src="img/amiparis_28901c407d.jpg" alt="beżowy (camel), białe logo" loading="lazy"><span>beżowy (camel), białe logo</span></button><button class="sw" data-src="img/amiparis_1587de3d.jpg" title="oliwkowy, białe logo"><img src="img/amiparis_1587de3d.jpg" alt="oliwkowy, białe logo" loading="lazy"><span>oliwkowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226125406?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">19 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226125802?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_9701b67d.jpg" alt="Sweter ze średnim czerwonym logo (2026)" loading="lazy"></a>
+<div class="body"><h3>Sweter ze średnim czerwonym logo (2026)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~kwiecień</div>
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_9701b67d.jpg" title="ecru, czerwone logo"><img src="img/amiparis_9701b67d.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/amiparis_34b8650c.jpg" title="grafitowy, czerwone logo"><img src="img/amiparis_34b8650c.jpg" alt="grafitowy, czerwone logo" loading="lazy"><span>grafitowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_1532a65b.jpg" title="granatowy, czerwone logo"><img src="img/amiparis_1532a65b.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_8b9aae74.jpg" title="czarny, czerwone logo"><img src="img/amiparis_8b9aae74.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226125802?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">10 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226126115?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_541ff4c2.jpg" alt="Kardigan w serek (wiosna/lato)" loading="lazy"></a>
+<div class="body"><h3>Kardigan w serek (wiosna/lato)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~kwiecień</div>
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_541ff4c2.jpg" title="granatowy, białe logo"><img src="img/amiparis_541ff4c2.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226126115?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">6 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226127071?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_65ba9276.jpg" alt="Sweter polo na guziki z czarnym logo (2026)" loading="lazy"></a>
+<div class="body"><h3>Sweter polo na guziki z czarnym logo (2026)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~kwiecień</div>
+<div class="comp"><span>Skład:</span> 100% wełna (wg opisu)</div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_65ba9276.jpg" title="ecru, czarne logo"><img src="img/amiparis_65ba9276.jpg" alt="ecru, czarne logo" loading="lazy"><span>ecru, czarne logo</span></button><button class="sw" data-src="img/amiparis_23db0d54.jpg" title="oliwkowy, czarne logo"><img src="img/amiparis_23db0d54.jpg" alt="oliwkowy, czarne logo" loading="lazy"><span>oliwkowy, czarne logo</span></button><button class="sw" data-src="img/amiparis_0ede1bc8.jpg" title="grafitowy, czarne logo"><img src="img/amiparis_0ede1bc8.jpg" alt="grafitowy, czarne logo" loading="lazy"><span>grafitowy, czarne logo</span></button><button class="sw" data-src="img/amiparis_c1cae26b.jpg" title="szaroniebieski, czarne logo"><img src="img/amiparis_c1cae26b.jpg" alt="szaroniebieski, czarne logo" loading="lazy"><span>szaroniebieski, czarne logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226127071?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">14 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/255496470?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_81101cf726.jpg" alt="Kardigan z alpaki (2026)" loading="lazy"></a>
+<div class="body"><h3>Kardigan z alpaki (2026)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~2 listopada</div>
+<div class="comp"><span>Skład:</span> alpaka</div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_81101cf726.jpg" title="szary, białe logo"><img src="img/amiparis_81101cf726.jpg" alt="szary, białe logo" loading="lazy"><span>szary, białe logo</span></button><button class="sw" data-src="img/amiparis_4182892b75.jpg" title="brązowy, białe logo"><img src="img/amiparis_4182892b75.jpg" alt="brązowy, białe logo" loading="lazy"><span>brązowy, białe logo</span></button><button class="sw" data-src="img/amiparis_58b1691963.jpg" title="błękitny, białe logo"><img src="img/amiparis_58b1691963.jpg" alt="błękitny, białe logo" loading="lazy"><span>błękitny, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/255496470?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">20 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/255496664?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_972da06d8f.jpg" alt="Sweter ADC z merynosa (2026)" loading="lazy"></a>
+<div class="body"><h3>Sweter ADC z merynosa (2026)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji, premiera ~28 października</div>
+<div class="comp"><span>Skład:</span> wełna merino</div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_972da06d8f.jpg" title="ecru, czarne logo"><img src="img/amiparis_972da06d8f.jpg" alt="ecru, czarne logo" loading="lazy"><span>ecru, czarne logo</span></button><button class="sw" data-src="img/amiparis_a9e4c7e537.jpg" title="czarny, białe logo"><img src="img/amiparis_a9e4c7e537.jpg" alt="czarny, białe logo" loading="lazy"><span>czarny, białe logo</span></button><button class="sw" data-src="img/amiparis_455aa81189.jpg" title="grafitowy, czarne logo"><img src="img/amiparis_455aa81189.jpg" alt="grafitowy, czarne logo" loading="lazy"><span>grafitowy, czarne logo</span></button><button class="sw" data-src="img/amiparis_ef255f5556.jpg" title="camel, czarne logo"><img src="img/amiparis_ef255f5556.jpg" alt="camel, czarne logo" loading="lazy"><span>camel, czarne logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/255496664?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">20 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/258705208?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_4e9adb1f0c.jpg" alt="Sweter ze średnim logo z wełny owczej (2027)" loading="lazy"></a>
+<div class="body"><h3>Sweter ze średnim logo z wełny owczej (2027)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">zapowiedź, brak ceny</div>
+<div class="comp"><span>Skład:</span> wełna owcza</div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_4e9adb1f0c.jpg" title="ecru, czerwone logo"><img src="img/amiparis_4e9adb1f0c.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/amiparis_93933e165f.jpg" title="czarny, czerwone logo"><img src="img/amiparis_93933e165f.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_14914d3a27.jpg" title="grafitowy, czerwone logo"><img src="img/amiparis_14914d3a27.jpg" alt="grafitowy, czerwone logo" loading="lazy"><span>grafitowy, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/258705208?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">9 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/258705659?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_34e60cf5b6.jpg" alt="Sweter z motywem chmur, mieszanka (2027)" loading="lazy"></a>
+<div class="body"><h3>Sweter z motywem chmur, mieszanka (2027)</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">zapowiedź, brak ceny</div>
+<div class="comp"><span>Skład:</span> mieszanka (wg tytułu)</div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_34e60cf5b6.jpg" title="ciemnobrązowy, białe logo"><img src="img/amiparis_34e60cf5b6.jpg" alt="ciemnobrązowy, białe logo" loading="lazy"><span>ciemnobrązowy, białe logo</span></button><button class="sw" data-src="img/amiparis_8a9aa11a7b.jpg" title="camel, białe logo"><img src="img/amiparis_8a9aa11a7b.jpg" alt="camel, białe logo" loading="lazy"><span>camel, białe logo</span></button><button class="sw" data-src="img/amiparis_a404dbceb9.jpg" title="brązowy, białe logo"><img src="img/amiparis_a404dbceb9.jpg" alt="brązowy, białe logo" loading="lazy"><span>brązowy, białe logo</span></button><button class="sw" data-src="img/amiparis_53006bae28.jpg" title="zielony butelkowy, białe logo"><img src="img/amiparis_53006bae28.jpg" alt="zielony butelkowy, białe logo" loading="lazy"><span>zielony butelkowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/258705659?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">8 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>9 prod. · 39–72 P</span></div><div class="grid"><article class="card" data-usd="39">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220440075?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_95b05e1c.jpg" alt="Sweter z małym czerwonym logo" loading="lazy"></a>
+<div class="body"><h3>Sweter z małym czerwonym logo</h3>
+<div class="price"><b>P39</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_95b05e1c.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_95b05e1c.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_92e104b7.jpg" title="granatowy, czerwone logo"><img src="img/repsbrothers_92e104b7.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220440075?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1005308055708" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864813260" target="_blank" rel="noopener">Weidian</a> <span class="n">11 zdjęć</span></div></div></article><article class="card" data-usd="42">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439769?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_0dae7d97.jpg" alt="Kardigan AMI" loading="lazy"></a>
+<div class="body"><h3>Kardigan AMI</h3>
+<div class="price"><b>P42</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_0dae7d97.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_0dae7d97.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_7068449b.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_7068449b.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439769?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1006747561528" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7862103669" target="_blank" rel="noopener">Weidian</a> <span class="n">13 zdjęć</span></div></div></article><article class="card" data-usd="49">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220440129?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_d2fbd941.jpg" alt="Sweter w paski" loading="lazy"></a>
+<div class="body"><h3>Sweter w paski</h3>
+<div class="price"><b>P49</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_d2fbd941.jpg" title="granatowy w białe paski, czerwone logo"><img src="img/repsbrothers_d2fbd941.jpg" alt="granatowy w białe paski, czerwone logo" loading="lazy"><span>granatowy w białe paski, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_2c107532.jpg" title="biały w granatowe paski, czerwone logo"><img src="img/repsbrothers_2c107532.jpg" alt="biały w granatowe paski, czerwone logo" loading="lazy"><span>biały w granatowe paski, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220440129?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1007495784116" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7862014479" target="_blank" rel="noopener">Weidian</a> <span class="n">11 zdjęć</span></div></div></article><article class="card" data-usd="49">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220440179?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_9928b824.jpg" alt="Sweter błękitny" loading="lazy"></a>
+<div class="body"><h3>Sweter błękitny</h3>
+<div class="price"><b>P49</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_9928b824.jpg" title="lawendowy błękit, białe logo"><img src="img/repsbrothers_9928b824.jpg" alt="lawendowy błękit, białe logo" loading="lazy"><span>lawendowy błękit, białe logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220440179?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1005933458989" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865070436" target="_blank" rel="noopener">Weidian</a> <span class="n">7 zdjęć</span></div></div></article><article class="card" data-usd="49">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220440241?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_d2216599.jpg" alt="Sweter z dużym logo" loading="lazy"></a>
+<div class="body"><h3>Sweter z dużym logo</h3>
+<div class="price"><b>P49</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_d2216599.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_d2216599.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_7ed0841d.jpg" title="szary, czerwone logo"><img src="img/repsbrothers_7ed0841d.jpg" alt="szary, czerwone logo" loading="lazy"><span>szary, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_fabf346b.jpg" title="granatowy, białe logo"><img src="img/repsbrothers_fabf346b.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button><button class="sw" data-src="img/repsbrothers_f34e25bd.jpg" title="kobaltowy niebieski, białe logo"><img src="img/repsbrothers_f34e25bd.jpg" alt="kobaltowy niebieski, białe logo" loading="lazy"><span>kobaltowy niebieski, białe logo</span></button><button class="sw" data-src="img/repsbrothers_fb434b6a.jpg" title="czerwony, białe logo"><img src="img/repsbrothers_fb434b6a.jpg" alt="czerwony, białe logo" loading="lazy"><span>czerwony, białe logo</span></button><button class="sw" data-src="img/repsbrothers_f5a31966.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_f5a31966.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220440241?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1005933458989" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865070436" target="_blank" rel="noopener">Weidian</a> <span class="n">43 zdjęć</span></div></div></article><article class="card" data-usd="49">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/225109164?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_1e198339f0.jpg" alt="Sweter ADC" loading="lazy"></a>
+<div class="body"><h3>Sweter ADC</h3>
+<div class="price"><b>P49</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_1e198339f0.jpg" title="ecru, czarne logo"><img src="img/repsbrothers_1e198339f0.jpg" alt="ecru, czarne logo" loading="lazy"><span>ecru, czarne logo</span></button><button class="sw" data-src="img/repsbrothers_5acdadd72f.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_5acdadd72f.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_7737bcc9.jpg" title="szary melanż, czarne logo"><img src="img/repsbrothers_7737bcc9.jpg" alt="szary melanż, czarne logo" loading="lazy"><span>szary melanż, czarne logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/225109164?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1021323548500" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865116126" target="_blank" rel="noopener">Weidian</a> <span class="n">15 zdjęć</span></div></div></article><article class="card" data-usd="52">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/225780073?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_24f3892b.jpg" alt="Sweter z kołnierzem polo" loading="lazy"></a>
+<div class="body"><h3>Sweter z kołnierzem polo</h3>
+<div class="price"><b>P52</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_24f3892b.jpg" title="ecru, czarne logo"><img src="img/repsbrothers_24f3892b.jpg" alt="ecru, czarne logo" loading="lazy"><span>ecru, czarne logo</span></button><button class="sw" data-src="img/repsbrothers_ec66c383.jpg" title="szary melanż, czarne logo"><img src="img/repsbrothers_ec66c383.jpg" alt="szary melanż, czarne logo" loading="lazy"><span>szary melanż, czarne logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/225780073?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1023467247163" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7862184151" target="_blank" rel="noopener">Weidian</a> <span class="n">14 zdjęć</span></div></div></article><article class="card" data-usd="54">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220440000?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_e1b9f94c.jpg" alt="Golf AMI" loading="lazy"></a>
+<div class="body"><h3>Golf AMI</h3>
+<div class="price"><b>P54</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_e1b9f94c.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_e1b9f94c.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_62ea42e5.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_62ea42e5.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_38a75059.jpg" title="szary, czarne logo"><img src="img/repsbrothers_38a75059.jpg" alt="szary, czarne logo" loading="lazy"><span>szary, czarne logo</span></button><button class="sw" data-src="img/repsbrothers_db65eec0.jpg" title="kobaltowy niebieski, białe logo"><img src="img/repsbrothers_db65eec0.jpg" alt="kobaltowy niebieski, białe logo" loading="lazy"><span>kobaltowy niebieski, białe logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220440000?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1005936342834" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865054538" target="_blank" rel="noopener">Weidian</a> <span class="n">20 zdjęć</span></div></div></article><article class="card" data-usd="72">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/256280008?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_cee1f1ee94.jpg" alt="Sweter z alpaki z białym logo" loading="lazy"></a>
+<div class="body"><h3>Sweter z alpaki z białym logo</h3>
+<div class="price"><b>P72</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> alpaka</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_cee1f1ee94.jpg" title="grafitowy, białe logo"><img src="img/repsbrothers_cee1f1ee94.jpg" alt="grafitowy, białe logo" loading="lazy"><span>grafitowy, białe logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/256280008?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1085687358154" target="_blank" rel="noopener">Taobao</a> <span class="n">4 zdjęć</span></div></div></article></div></div></div></section><section id="c1"><h2>Bluzy z kapturem</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>16 prod. · ≈ 46–68 $</span></div><div class="grid"><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172684896?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_797764b8.jpg" alt="Bluza z kapturem z małym logo (klasyczna)" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z małym logo (klasyczna)</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/amiparis_797764b8.jpg" title="czarny, czerwone logo"><img src="img/amiparis_797764b8.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_744c18bf.jpg" title="granatowy"><img src="img/amiparis_744c18bf.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_a0f5cffb.jpg" title="beżowy"><img src="img/amiparis_a0f5cffb.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_e0e6721a.jpg" title="zielony butelkowy"><img src="img/amiparis_e0e6721a.jpg" alt="zielony butelkowy" loading="lazy"><span>zielony butelkowy</span></button><button class="sw" data-src="img/amiparis_bca3f83d.jpg" title="szary melanż"><img src="img/amiparis_bca3f83d.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_e055d1c6.jpg" title="niebieski"><img src="img/amiparis_e055d1c6.jpg" alt="niebieski" loading="lazy"><span>niebieski</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172684896?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700038825806" target="_blank" rel="noopener">Taobao</a> <span class="n">92 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172689016?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_5062b418.jpg" alt="Bluza z kapturem z wypukłą naszywką" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z wypukłą naszywką</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_5062b418.jpg" title="czarny, białe logo"><img src="img/amiparis_5062b418.jpg" alt="czarny, białe logo" loading="lazy"><span>czarny, białe logo</span></button><button class="sw" data-src="img/amiparis_b5fcd5b9.jpg" title="granatowy, białe logo"><img src="img/amiparis_b5fcd5b9.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button><button class="sw" data-src="img/amiparis_a12500d0.jpg" title="szary melanż"><img src="img/amiparis_a12500d0.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172689016?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=754299842818" target="_blank" rel="noopener">Taobao</a> <span class="n">49 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172692369?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_3592d2c7.jpg" alt="Bluza z kapturem ze średnim logo" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem ze średnim logo</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_3592d2c7.jpg" title="błękitny"><img src="img/amiparis_3592d2c7.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_c362d1f0.jpg" title="czarny"><img src="img/amiparis_c362d1f0.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_adf74de7.jpg" title="beżowy"><img src="img/amiparis_adf74de7.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172692369?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=759577219227" target="_blank" rel="noopener">Taobao</a> <span class="n">91 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172977833?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_6b4b62a8.jpg" alt="Bluza z kapturem na zamek, kolory pastelowe" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem na zamek, kolory pastelowe</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_6b4b62a8.jpg" title="błękitny"><img src="img/amiparis_6b4b62a8.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_9479241f.jpg" title="czarny"><img src="img/amiparis_9479241f.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172977833?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=742919867100" target="_blank" rel="noopener">Taobao</a> <span class="n">40 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173059318?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_45c89ac3.jpg" alt="Bluza z kapturem z nadrukiem napisu" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z nadrukiem napisu</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_45c89ac3.jpg" title="czarny"><img src="img/amiparis_45c89ac3.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_aa226cba.jpg" title="szary melanż"><img src="img/amiparis_aa226cba.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_63730879.jpg" title="granatowy"><img src="img/amiparis_63730879.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173059318?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=743677553084" target="_blank" rel="noopener">Taobao</a> <span class="n">53 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173209605?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_05fa2980.jpg" alt="Bluza z kapturem z małym logo, rękaw raglanowy" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z małym logo, rękaw raglanowy</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_05fa2980.jpg" title="granatowy"><img src="img/amiparis_05fa2980.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_a3bc664f.jpg" title="czarny"><img src="img/amiparis_a3bc664f.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_6a8a5f4a.jpg" title="szary melanż"><img src="img/amiparis_6a8a5f4a.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_8b0d001d.jpg" title="beżowy"><img src="img/amiparis_8b0d001d.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173209605?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=759389496260" target="_blank" rel="noopener">Taobao</a> <span class="n">74 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/179263326?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_90f79d4f.jpg" alt="Bluza z kapturem z małym logo (2024)" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z małym logo (2024)</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_90f79d4f.jpg" title="jasnobeżowy, bordowe serce"><img src="img/amiparis_90f79d4f.jpg" alt="jasnobeżowy, bordowe serce" loading="lazy"><span>jasnobeżowy, bordowe serce</span></button><button class="sw" data-src="img/amiparis_5476ab47.jpg" title="jasnobłękitny, bordowe serce"><img src="img/amiparis_5476ab47.jpg" alt="jasnobłękitny, bordowe serce" loading="lazy"><span>jasnobłękitny, bordowe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/179263326?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=851971400704" target="_blank" rel="noopener">Taobao</a> <span class="n">44 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/179276165?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_c14217b7.jpg" alt="Bluza z kapturem ze średnim logo (2024)" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem ze średnim logo (2024)</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_c14217b7.jpg" title="czarny, czerwone serce"><img src="img/amiparis_c14217b7.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_28b821a8.jpg" title="jasnoszary melanż, czerwone serce"><img src="img/amiparis_28b821a8.jpg" alt="jasnoszary melanż, czerwone serce" loading="lazy"><span>jasnoszary melanż, czerwone serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/179276165?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=849880240856" target="_blank" rel="noopener">Taobao</a> <span class="n">39 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/189660504?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_8625fcb0.jpg" alt="Bluza z kapturem z białą naszywką (2025)" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z białą naszywką (2025)</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_8625fcb0.jpg" title="granatowy"><img src="img/amiparis_8625fcb0.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_7f751819.jpg" title="czarny"><img src="img/amiparis_7f751819.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/189660504?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=942216881688" target="_blank" rel="noopener">Taobao</a> <span class="n">38 zdjęć</span></div></div></article><article class="card" data-usd="46">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/212378627?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_a80375bf.jpg" alt="Bluza z kapturem z małym czarnym sercem" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z małym czarnym sercem</h3>
+<div class="price"><b>330 CNY</b> <span class="usd">≈ 46 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_a80375bf.jpg" title="jasnoszary melanż, czarne serce"><img src="img/amiparis_a80375bf.jpg" alt="jasnoszary melanż, czarne serce" loading="lazy"><span>jasnoszary melanż, czarne serce</span></button><button class="sw" data-src="img/amiparis_0082f60a.jpg" title="jasnobłękitny, czarne serce"><img src="img/amiparis_0082f60a.jpg" alt="jasnobłękitny, czarne serce" loading="lazy"><span>jasnobłękitny, czarne serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/212378627?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=987801176614" target="_blank" rel="noopener">Taobao</a> <span class="n">29 zdjęć</span></div></div></article><article class="card" data-usd="48">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/177580341?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_ee781333.jpg" alt="Bluza z kapturem na zamek z małym logo" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem na zamek z małym logo</h3>
+<div class="price"><b>339 CNY</b> <span class="usd">≈ 48 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_ee781333.jpg" title="czarny, czerwone serce"><img src="img/amiparis_ee781333.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_44b94c5c.jpg" title="jasnoszary melanż, bordowe serce"><img src="img/amiparis_44b94c5c.jpg" alt="jasnoszary melanż, bordowe serce" loading="lazy"><span>jasnoszary melanż, bordowe serce</span></button><button class="sw" data-src="img/amiparis_c4d21663.jpg" title="granatowy"><img src="img/amiparis_c4d21663.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/177580341?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=843930263352" target="_blank" rel="noopener">Taobao</a> <span class="n">86 zdjęć</span></div></div></article><article class="card" data-usd="48">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/189382947?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_e97427a1.jpg" alt="Bluza z kapturem na zamek z białą naszywką (2025)" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem na zamek z białą naszywką (2025)</h3>
+<div class="price"><b>339 CNY</b> <span class="usd">≈ 48 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_e97427a1.jpg" title="granatowy"><img src="img/amiparis_e97427a1.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_14eb0176.jpg" title="khaki/oliwkowy"><img src="img/amiparis_14eb0176.jpg" alt="khaki/oliwkowy" loading="lazy"><span>khaki/oliwkowy</span></button><button class="sw" data-src="img/amiparis_6ccd3f2b.jpg" title="beżowy"><img src="img/amiparis_6ccd3f2b.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/189382947?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=908927260163" target="_blank" rel="noopener">Taobao</a> <span class="n">74 zdjęć</span></div></div></article><article class="card" data-usd="48">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/211410985?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_a1af0849.jpg" alt="Bluza na zamek z małym czarnym sercem (2025)" loading="lazy"></a>
+<div class="body"><h3>Bluza na zamek z małym czarnym sercem (2025)</h3>
+<div class="price"><b>339 CNY</b> <span class="usd">≈ 48 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_a1af0849.jpg" title="jasnoszary melanż"><img src="img/amiparis_a1af0849.jpg" alt="jasnoszary melanż" loading="lazy"><span>jasnoszary melanż</span></button><button class="sw" data-src="img/amiparis_8596567a.jpg" title="jasnobłękitny"><img src="img/amiparis_8596567a.jpg" alt="jasnobłękitny" loading="lazy"><span>jasnobłękitny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/211410985?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=984518230098" target="_blank" rel="noopener">Taobao</a> <span class="n">34 zdjęć</span></div></div></article><article class="card" data-usd="48">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/218160338?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_72ffd6a6.jpg" alt="Bluza na zamek (jesień/zima 2023)" loading="lazy"></a>
+<div class="body"><h3>Bluza na zamek (jesień/zima 2023)</h3>
+<div class="price"><b>339 CNY</b> <span class="usd">≈ 48 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_72ffd6a6.jpg" title="czarny, czerwone logo"><img src="img/amiparis_72ffd6a6.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_d3d0e30f.jpg" title="szary melanż, czerwone logo"><img src="img/amiparis_d3d0e30f.jpg" alt="szary melanż, czerwone logo" loading="lazy"><span>szary melanż, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/218160338?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=760611379567" target="_blank" rel="noopener">Taobao</a> <span class="n">32 zdjęć</span></div></div></article><article class="card" data-usd="52">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/214922101?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_072e394a.jpg" alt="Bluza z kapturem z haftowanym napisem AMI" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z haftowanym napisem AMI</h3>
+<div class="price"><b>369 CNY</b> <span class="usd">≈ 52 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_072e394a.jpg" title="ecru, granatowy napis"><img src="img/amiparis_072e394a.jpg" alt="ecru, granatowy napis" loading="lazy"><span>ecru, granatowy napis</span></button><button class="sw" data-src="img/amiparis_d4df496d.jpg" title="granatowy, kremowy napis"><img src="img/amiparis_d4df496d.jpg" alt="granatowy, kremowy napis" loading="lazy"><span>granatowy, kremowy napis</span></button><button class="sw" data-src="img/amiparis_576c2e1c.jpg" title="czarny/ciemnogranatowy"><img src="img/amiparis_576c2e1c.jpg" alt="czarny/ciemnogranatowy" loading="lazy"><span>czarny/ciemnogranatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/214922101?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1002757616105" target="_blank" rel="noopener">Taobao</a> <span class="n">39 zdjęć</span></div></div></article><article class="card" data-usd="68">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172988521?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_48b4f49a.jpg" alt="Bluza z kapturem z dzianiny, duże logo" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z dzianiny, duże logo</h3>
+<div class="price"><b>480 CNY</b> <span class="usd">≈ 68 $</span></div>
+
+<div class="comp"><span>Skład:</span> wełna</div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_48b4f49a.jpg" title="czarny, czerwone logo"><img src="img/amiparis_48b4f49a.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_58f4e56c.jpg" title="granatowy, białe logo"><img src="img/amiparis_58f4e56c.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172988521?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=754464840452" target="_blank" rel="noopener">Taobao</a> <span class="n">47 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>3 prod. · 30–32 P</span></div><div class="grid"><article class="card" data-usd="30">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439416?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_17069c65.jpg" alt="Bluza z kapturem AMI" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem AMI</h3>
+<div class="price"><b>P30</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_ce1eab5d.jpg" title="czarny"><img src="img/repsbrothers_ce1eab5d.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/repsbrothers_d09d3fab.jpg" title="szary melanż"><img src="img/repsbrothers_d09d3fab.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/repsbrothers_17069c65.jpg" title="błękitny"><img src="img/repsbrothers_17069c65.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/repsbrothers_ae312623.jpg" title="beżowy/ecru"><img src="img/repsbrothers_ae312623.jpg" alt="beżowy/ecru" loading="lazy"><span>beżowy/ecru</span></button><button class="sw" data-src="img/repsbrothers_9ccf6cb1.jpg" title="miętowy"><img src="img/repsbrothers_9ccf6cb1.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/repsbrothers_26a0aa76.jpg" title="khaki"><img src="img/repsbrothers_26a0aa76.jpg" alt="khaki" loading="lazy"><span>khaki</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439416?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1007488868016" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865076234" target="_blank" rel="noopener">Weidian</a> <span class="n">20 zdjęć</span></div></div></article><article class="card" data-usd="32">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439353?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_d5c39636.jpg" alt="Bluza z kapturem na zamek AMI" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem na zamek AMI</h3>
+<div class="price"><b>P32</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_d5c39636.jpg" title="błękitny"><img src="img/repsbrothers_d5c39636.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/repsbrothers_4dd64ca8.jpg" title="miętowy (aqua)"><img src="img/repsbrothers_4dd64ca8.jpg" alt="miętowy (aqua)" loading="lazy"><span>miętowy (aqua)</span></button><button class="sw" data-src="img/repsbrothers_4502eed4.jpg" title="khaki/szarobeżowy"><img src="img/repsbrothers_4502eed4.jpg" alt="khaki/szarobeżowy" loading="lazy"><span>khaki/szarobeżowy</span></button><button class="sw" data-src="img/repsbrothers_e8c52c23.jpg" title="czarny"><img src="img/repsbrothers_e8c52c23.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/repsbrothers_9a54f61b.jpg" title="szary melanż"><img src="img/repsbrothers_9a54f61b.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439353?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1007483344606" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7865094220" target="_blank" rel="noopener">Weidian</a> <span class="n">29 zdjęć</span></div></div></article><article class="card" data-usd="32">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439921?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_e6c5c673.jpg" alt="Bluza z kapturem z małym czerwonym sercem" loading="lazy"></a>
+<div class="body"><h3>Bluza z kapturem z małym czerwonym sercem</h3>
+<div class="price"><b>P32</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_e6c5c673.jpg" title="szary melanż, czerwone logo"><img src="img/repsbrothers_e6c5c673.jpg" alt="szary melanż, czerwone logo" loading="lazy"><span>szary melanż, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_190988559c.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_190988559c.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439921?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1006727757097" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864803288" target="_blank" rel="noopener">Weidian</a> <span class="n">19 zdjęć</span></div></div></article></div></div></div></section><section id="c2"><h2>Bluzy bez kaptura</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>12 prod. · ≈ 25–41 $</span></div><div class="grid"><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173041459?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_7da91819.jpg" alt="Bluza z nadrukiem napisu" loading="lazy"></a>
+<div class="body"><h3>Bluza z nadrukiem napisu</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_7da91819.jpg" title="granatowy"><img src="img/amiparis_7da91819.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_f4f54a82.jpg" title="czerwony"><img src="img/amiparis_f4f54a82.jpg" alt="czerwony" loading="lazy"><span>czerwony</span></button><button class="sw" data-src="img/amiparis_116bde4b.jpg" title="szary melanż"><img src="img/amiparis_116bde4b.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_bec006ea.jpg" title="czarny"><img src="img/amiparis_bec006ea.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173041459?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=711573029437" target="_blank" rel="noopener">Taobao</a> <span class="n">53 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173068818?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_885218cf.jpg" alt="Bluza z dużym haftowanym napisem" loading="lazy"></a>
+<div class="body"><h3>Bluza z dużym haftowanym napisem</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_885218cf.jpg" title="granatowy"><img src="img/amiparis_885218cf.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_d5766b7d.jpg" title="biały, granatowy nadruk"><img src="img/amiparis_d5766b7d.jpg" alt="biały, granatowy nadruk" loading="lazy"><span>biały, granatowy nadruk</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173068818?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=742562982152" target="_blank" rel="noopener">Taobao</a> <span class="n">57 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173187861?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_e0003cf1.jpg" alt="Bluza ze stójką na krótki zamek" loading="lazy"></a>
+<div class="body"><h3>Bluza ze stójką na krótki zamek</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_e0003cf1.jpg" title="błękitny"><img src="img/amiparis_e0003cf1.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_765bffc1.jpg" title="czarny"><img src="img/amiparis_765bffc1.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_f300f042.jpg" title="beżowy"><img src="img/amiparis_f300f042.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173187861?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=761834820624" target="_blank" rel="noopener">Taobao</a> <span class="n">57 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172682056?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_47a1e495.jpg" alt="Bluza z małym logo (klasyczna)" loading="lazy"></a>
+<div class="body"><h3>Bluza z małym logo (klasyczna)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/amiparis_47a1e495.jpg" title="czarny, czerwone logo"><img src="img/amiparis_47a1e495.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_b389ce83.jpg" title="beżowy, czerwone logo"><img src="img/amiparis_b389ce83.jpg" alt="beżowy, czerwone logo" loading="lazy"><span>beżowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_1e3e9fd2.jpg" title="zielony butelkowy"><img src="img/amiparis_1e3e9fd2.jpg" alt="zielony butelkowy" loading="lazy"><span>zielony butelkowy</span></button><button class="sw" data-src="img/amiparis_a82357ad.jpg" title="szary melanż"><img src="img/amiparis_a82357ad.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_d6cd61e4.jpg" title="lawendowy"><img src="img/amiparis_d6cd61e4.jpg" alt="lawendowy" loading="lazy"><span>lawendowy</span></button><button class="sw" data-src="img/amiparis_a5616530.jpg" title="granatowy, czerwone logo"><img src="img/amiparis_a5616530.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172682056?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700475659584" target="_blank" rel="noopener">Taobao</a> <span class="n">120 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172693024?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_2383d8ba.jpg" alt="Bluza ze średnim logo" loading="lazy"></a>
+<div class="body"><h3>Bluza ze średnim logo</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/amiparis_2383d8ba.jpg" title="czarny"><img src="img/amiparis_2383d8ba.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_07d6d8c8.jpg" title="błękitny"><img src="img/amiparis_07d6d8c8.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_d502c5e1.jpg" title="szaroniebieski"><img src="img/amiparis_d502c5e1.jpg" alt="szaroniebieski" loading="lazy"><span>szaroniebieski</span></button><button class="sw" data-src="img/amiparis_a0694efe.jpg" title="miętowy"><img src="img/amiparis_a0694efe.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/amiparis_36f2fcb7.jpg" title="granatowy"><img src="img/amiparis_36f2fcb7.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_36f2fcb7.jpg" title="beżowy"><img src="img/amiparis_36f2fcb7.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172693024?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700577371997" target="_blank" rel="noopener">Taobao</a> <span class="n">79 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172694157?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_c8264a5a.jpg" alt="Bluza z wypukłą naszywką" loading="lazy"></a>
+<div class="body"><h3>Bluza z wypukłą naszywką</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_c8264a5a.jpg" title="czarny, białe logo"><img src="img/amiparis_c8264a5a.jpg" alt="czarny, białe logo" loading="lazy"><span>czarny, białe logo</span></button><button class="sw" data-src="img/amiparis_4eb54530.jpg" title="zielony butelkowy, białe logo"><img src="img/amiparis_4eb54530.jpg" alt="zielony butelkowy, białe logo" loading="lazy"><span>zielony butelkowy, białe logo</span></button><button class="sw" data-src="img/amiparis_d83b404e.jpg" title="szary melanż"><img src="img/amiparis_d83b404e.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_11ea2f0f.jpg" title="grafitowy"><img src="img/amiparis_11ea2f0f.jpg" alt="grafitowy" loading="lazy"><span>grafitowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172694157?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=699802208115" target="_blank" rel="noopener">Taobao</a> <span class="n">61 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173153543?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_ce9ff71e.jpg" alt="Bluza ze średnim logo (2023)" loading="lazy"></a>
+<div class="body"><h3>Bluza ze średnim logo (2023)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_ce9ff71e.jpg" title="granatowy"><img src="img/amiparis_ce9ff71e.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_7532afa7.jpg" title="czarny"><img src="img/amiparis_7532afa7.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_68fcc251.jpg" title="błękitny"><img src="img/amiparis_68fcc251.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_9bba4c8d.jpg" title="szary melanż"><img src="img/amiparis_9bba4c8d.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173153543?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=741108299538" target="_blank" rel="noopener">Taobao</a> <span class="n">57 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173221031?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_90cfc83e.jpg" alt="Bluza ze średnim logo, szara" loading="lazy"></a>
+<div class="body"><h3>Bluza ze średnim logo, szara</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_90cfc83e.jpg" title="szary melanż"><img src="img/amiparis_90cfc83e.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173221031?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=776114965808" target="_blank" rel="noopener">Taobao</a> <span class="n">36 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173223190?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_f09b2396.jpg" alt="Bluza (wiosna/lato 2024)" loading="lazy"></a>
+<div class="body"><h3>Bluza (wiosna/lato 2024)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_f09b2396.jpg" title="beżowy (taupe), bordowe serce"><img src="img/amiparis_f09b2396.jpg" alt="beżowy (taupe), bordowe serce" loading="lazy"><span>beżowy (taupe), bordowe serce</span></button><button class="sw" data-src="img/amiparis_bdea351b.jpg" title="błękitny, bordowe serce"><img src="img/amiparis_bdea351b.jpg" alt="błękitny, bordowe serce" loading="lazy"><span>błękitny, bordowe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173223190?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=779656438851" target="_blank" rel="noopener">Taobao</a> <span class="n">28 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/198641837?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_9aa6c556.jpg" alt="Bluza z białą naszywką" loading="lazy"></a>
+<div class="body"><h3>Bluza z białą naszywką</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_9aa6c556.jpg" title="granatowy"><img src="img/amiparis_9aa6c556.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_62d20174.jpg" title="khaki"><img src="img/amiparis_62d20174.jpg" alt="khaki" loading="lazy"><span>khaki</span></button><button class="sw" data-src="img/amiparis_295c22bb.jpg" title="czarny"><img src="img/amiparis_295c22bb.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/198641837?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=940315144119" target="_blank" rel="noopener">Taobao</a> <span class="n">52 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226126358?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_300f793a.jpg" alt="Bluza z małym czarnym sercem" loading="lazy"></a>
+<div class="body"><h3>Bluza z małym czarnym sercem</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_300f793a.jpg" title="khaki, czarne logo"><img src="img/amiparis_300f793a.jpg" alt="khaki, czarne logo" loading="lazy"><span>khaki, czarne logo</span></button><button class="sw" data-src="img/amiparis_22326234.jpg" title="jasnoszary melanż"><img src="img/amiparis_22326234.jpg" alt="jasnoszary melanż" loading="lazy"><span>jasnoszary melanż</span></button><button class="sw" data-src="img/amiparis_956cfe62.jpg" title="błękitny"><img src="img/amiparis_956cfe62.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226126358?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1045196086401" target="_blank" rel="noopener">Taobao</a> <span class="n">50 zdjęć</span></div></div></article><article class="card" data-usd="41">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/189263440?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_70324ff7.jpg" alt="Bluza ADC" loading="lazy"></a>
+<div class="body"><h3>Bluza ADC</h3>
+<div class="price"><b>290 CNY</b> <span class="usd">≈ 41 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_70324ff7.jpg" title="ecru, bordowe serce"><img src="img/amiparis_70324ff7.jpg" alt="ecru, bordowe serce" loading="lazy"><span>ecru, bordowe serce</span></button><button class="sw" data-src="img/amiparis_c4f58c78.jpg" title="granatowy"><img src="img/amiparis_c4f58c78.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/189263440?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=938844495545" target="_blank" rel="noopener">Taobao</a> <span class="n">45 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>2 prod. · 26–28 P</span></div><div class="grid"><article class="card" data-usd="26">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/241410213?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_a623fa95e6.jpg" alt="Bluza z małym czerwonym sercem" loading="lazy"></a>
+<div class="body"><h3>Bluza z małym czerwonym sercem</h3>
+<div class="price"><b>P26</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_85dccb3f20.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_85dccb3f20.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_a623fa95e6.jpg" title="granatowy, czerwone logo"><img src="img/repsbrothers_a623fa95e6.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_b3ff1e6233.jpg" title="beżowy, czerwone logo"><img src="img/repsbrothers_b3ff1e6233.jpg" alt="beżowy, czerwone logo" loading="lazy"><span>beżowy, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/241410213?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1058130857220" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7861836847" target="_blank" rel="noopener">Weidian</a> <span class="n">18 zdjęć</span></div></div></article><article class="card" data-usd="28">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439480?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_425ea173.jpg" alt="Bluza AMI" loading="lazy"></a>
+<div class="body"><h3>Bluza AMI</h3>
+<div class="price"><b>P28</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (6):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_65a55629.jpg" title="czarny"><img src="img/repsbrothers_65a55629.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/repsbrothers_425ea173.jpg" title="błękitny"><img src="img/repsbrothers_425ea173.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/repsbrothers_81aa0049.jpg" title="szary melanż"><img src="img/repsbrothers_81aa0049.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/repsbrothers_3449a626.jpg" title="miętowy"><img src="img/repsbrothers_3449a626.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/repsbrothers_59ad4a3a.jpg" title="ecru"><img src="img/repsbrothers_59ad4a3a.jpg" alt="ecru" loading="lazy"><span>ecru</span></button><button class="sw" data-src="img/repsbrothers_ca59b24f.jpg" title="khaki"><img src="img/repsbrothers_ca59b24f.jpg" alt="khaki" loading="lazy"><span>khaki</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439480?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1005301863984" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864947460" target="_blank" rel="noopener">Weidian</a> <span class="n">28 zdjęć</span></div></div></article></div></div></div></section><section id="c3"><h2>T-shirty</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>12 prod. · ≈ 18–25 $</span></div><div class="grid"><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172686485?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_85dccd72.jpg" alt="T-shirt z małym logo (klasyczny)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z małym logo (klasyczny)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (7):</div><div class="sws"><button class="sw" data-src="img/amiparis_85dccd72.jpg" title="granatowy, czerwone logo"><img src="img/amiparis_85dccd72.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_2eb3a654.jpg" title="beżowy"><img src="img/amiparis_2eb3a654.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_8beee5a3.jpg" title="czarny"><img src="img/amiparis_8beee5a3.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_af7c6af3.jpg" title="szary melanż"><img src="img/amiparis_af7c6af3.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_a08430bc.jpg" title="biały"><img src="img/amiparis_a08430bc.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_5ae395ca.jpg" title="szaro-oliwkowy"><img src="img/amiparis_5ae395ca.jpg" alt="szaro-oliwkowy" loading="lazy"><span>szaro-oliwkowy</span></button><button class="sw" data-src="img/amiparis_79708a24.jpg" title="fioletowo-granatowy"><img src="img/amiparis_79708a24.jpg" alt="fioletowo-granatowy" loading="lazy"><span>fioletowo-granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172686485?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700284994293" target="_blank" rel="noopener">Taobao</a> <span class="n">59 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172737841?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_0137e105.jpg" alt="T-shirt ze średnim logo (2023)" loading="lazy"></a>
+<div class="body"><h3>T-shirt ze średnim logo (2023)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_0137e105.jpg" title="czarny, czerwone logo"><img src="img/amiparis_0137e105.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_c19bfc43.jpg" title="błękitny"><img src="img/amiparis_c19bfc43.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_525579db.jpg" title="biały"><img src="img/amiparis_525579db.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_43ca1cee.jpg" title="szary melanż"><img src="img/amiparis_43ca1cee.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172737841?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=710811694138" target="_blank" rel="noopener">Taobao</a> <span class="n">68 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172860961?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_9fb6c1df.jpg" alt="T-shirt z dużym sercem (klasyczny)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z dużym sercem (klasyczny)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/amiparis_9fb6c1df.jpg" title="błękitny"><img src="img/amiparis_9fb6c1df.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_62405360.jpg" title="miętowy"><img src="img/amiparis_62405360.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/amiparis_639c0034.jpg" title="czarny"><img src="img/amiparis_639c0034.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_aced7e13.jpg" title="ecru"><img src="img/amiparis_aced7e13.jpg" alt="ecru" loading="lazy"><span>ecru</span></button><button class="sw" data-src="img/amiparis_74ebc9c1.jpg" title="niebieski stonowany"><img src="img/amiparis_74ebc9c1.jpg" alt="niebieski stonowany" loading="lazy"><span>niebieski stonowany</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172860961?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=724210158351" target="_blank" rel="noopener">Taobao</a> <span class="n">91 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173084060?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_a2464e5e.jpg" alt="T-shirt z logo w kolorze materiału" loading="lazy"></a>
+<div class="body"><h3>T-shirt z logo w kolorze materiału</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_a2464e5e.jpg" title="czarny"><img src="img/amiparis_a2464e5e.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_12591dc5.jpg" title="granatowy"><img src="img/amiparis_12591dc5.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_8439b67d.jpg" title="niebieski kobaltowy"><img src="img/amiparis_8439b67d.jpg" alt="niebieski kobaltowy" loading="lazy"><span>niebieski kobaltowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173084060?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=732734610291" target="_blank" rel="noopener">Taobao</a> <span class="n">40 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173225400?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_89333b49.jpg" alt="T-shirt z małym sercem (2024)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z małym sercem (2024)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> bawełna</div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_1f3e306d.jpg" title="taupe/szarobrązowy"><img src="img/amiparis_1f3e306d.jpg" alt="taupe/szarobrązowy" loading="lazy"><span>taupe/szarobrązowy</span></button><button class="sw" data-src="img/amiparis_80271223.jpg" title="beżowy"><img src="img/amiparis_80271223.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_89333b49.jpg" title="błękitny"><img src="img/amiparis_89333b49.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_92547f66.jpg" title="oliwkowy"><img src="img/amiparis_92547f66.jpg" alt="oliwkowy" loading="lazy"><span>oliwkowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173225400?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=803507820233" target="_blank" rel="noopener">Taobao</a> <span class="n">62 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/189653606?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_d39b70a4.jpg" alt="T-shirt z białą naszywką (2025)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z białą naszywką (2025)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_d39b70a4.jpg" title="granatowy"><img src="img/amiparis_d39b70a4.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_14ae34ca30.jpg" title="khaki/taupe"><img src="img/amiparis_14ae34ca30.jpg" alt="khaki/taupe" loading="lazy"><span>khaki/taupe</span></button><button class="sw" data-src="img/amiparis_c4d85621af.jpg" title="czarny"><img src="img/amiparis_c4d85621af.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/189653606?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=908504989781" target="_blank" rel="noopener">Taobao</a> <span class="n">71 zdjęć</span></div></div></article><article class="card" data-usd="18">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226127360?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_2c13a23e.jpg" alt="T-shirt z małym czarnym sercem (2026)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z małym czarnym sercem (2026)</h3>
+<div class="price"><b>130 CNY</b> <span class="usd">≈ 18 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_2c13a23e.jpg" title="biały"><img src="img/amiparis_2c13a23e.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_d7edcdfc84.jpg" title="szary melanż"><img src="img/amiparis_d7edcdfc84.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_7f22e12f.jpg" title="beżowy"><img src="img/amiparis_7f22e12f.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226127360?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1051306296173" target="_blank" rel="noopener">Taobao</a> <span class="n">37 zdjęć</span></div></div></article><article class="card" data-usd="21">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172738884?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_1ca2364a.jpg" alt="T-shirt z wypukłą naszywką" loading="lazy"></a>
+<div class="body"><h3>T-shirt z wypukłą naszywką</h3>
+<div class="price"><b>150 CNY</b> <span class="usd">≈ 21 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/amiparis_1ca2364a.jpg" title="czarny, białe logo"><img src="img/amiparis_1ca2364a.jpg" alt="czarny, białe logo" loading="lazy"><span>czarny, białe logo</span></button><button class="sw" data-src="img/amiparis_498a211d.jpg" title="granatowy"><img src="img/amiparis_498a211d.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_4ad1bf77.jpg" title="szary melanż"><img src="img/amiparis_4ad1bf77.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_b7bc428f.jpg" title="zielony butelkowy"><img src="img/amiparis_b7bc428f.jpg" alt="zielony butelkowy" loading="lazy"><span>zielony butelkowy</span></button><button class="sw" data-src="img/amiparis_d3395897.jpg" title="zielony"><img src="img/amiparis_d3395897.jpg" alt="zielony" loading="lazy"><span>zielony</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172738884?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=771697203151" target="_blank" rel="noopener">Taobao</a> <span class="n">72 zdjęć</span></div></div></article><article class="card" data-usd="21">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173224174?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_ce06ce79.jpg" alt="T-shirt z tłoczonym logo" loading="lazy"></a>
+<div class="body"><h3>T-shirt z tłoczonym logo</h3>
+<div class="price"><b>150 CNY</b> <span class="usd">≈ 21 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_ce06ce79.jpg" title="ecru"><img src="img/amiparis_ce06ce79.jpg" alt="ecru" loading="lazy"><span>ecru</span></button><button class="sw" data-src="img/amiparis_50ee91e1.jpg" title="taupe/jasnobrązowy"><img src="img/amiparis_50ee91e1.jpg" alt="taupe/jasnobrązowy" loading="lazy"><span>taupe/jasnobrązowy</span></button><button class="sw" data-src="img/amiparis_4468f7a1.jpg" title="czarny"><img src="img/amiparis_4468f7a1.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_84a266bc.jpg" title="granatowy"><img src="img/amiparis_84a266bc.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173224174?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=803469789624" target="_blank" rel="noopener">Taobao</a> <span class="n">44 zdjęć</span></div></div></article><article class="card" data-usd="21">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173226332?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_22b83f57.jpg" alt="T-shirt w paski z małym sercem" loading="lazy"></a>
+<div class="body"><h3>T-shirt w paski z małym sercem</h3>
+<div class="price"><b>150 CNY</b> <span class="usd">≈ 21 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_22b83f57.jpg" title="czarno-biały pasy, bordowe serce"><img src="img/amiparis_22b83f57.jpg" alt="czarno-biały pasy, bordowe serce" loading="lazy"><span>czarno-biały pasy, bordowe serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173226332?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=809575988855" target="_blank" rel="noopener">Taobao</a> <span class="n">27 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/187205253?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_2cb4bf49.jpg" alt="T-shirt z dużą naszywką ADC" loading="lazy"></a>
+<div class="body"><h3>T-shirt z dużą naszywką ADC</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_2cb4bf49.jpg" title="ecru, bordowe serce"><img src="img/amiparis_2cb4bf49.jpg" alt="ecru, bordowe serce" loading="lazy"><span>ecru, bordowe serce</span></button><button class="sw" data-src="img/amiparis_f5b5a33a.jpg" title="granatowy"><img src="img/amiparis_f5b5a33a.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/187205253?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=925594099397" target="_blank" rel="noopener">Taobao</a> <span class="n">47 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/194151922?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_ef8fc80d.jpg" alt="T-shirt z haftowanym napisem (2025)" loading="lazy"></a>
+<div class="body"><h3>T-shirt z haftowanym napisem (2025)</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_ef8fc80d.jpg" title="ecru"><img src="img/amiparis_ef8fc80d.jpg" alt="ecru" loading="lazy"><span>ecru</span></button><button class="sw" data-src="img/amiparis_b35bd98e.jpg" title="granatowy"><img src="img/amiparis_b35bd98e.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/194151922?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=964992064865" target="_blank" rel="noopener">Taobao</a> <span class="n">49 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>3 prod. · 15 P</span></div><div class="grid"><article class="card" data-usd="15">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/144747170?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_6b0cabd3.jpg" alt="T-shirt AMI" loading="lazy"></a>
+<div class="body"><h3>T-shirt AMI</h3>
+<div class="price"><b>P15</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_5bd9372b.jpg" title="czarny"><img src="img/repsbrothers_5bd9372b.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/repsbrothers_4901901d.jpg" title="błękitny"><img src="img/repsbrothers_4901901d.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/repsbrothers_45d24788.jpg" title="miętowy"><img src="img/repsbrothers_45d24788.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/repsbrothers_6b0cabd3.jpg" title="ecru/kremowy"><img src="img/repsbrothers_6b0cabd3.jpg" alt="ecru/kremowy" loading="lazy"><span>ecru/kremowy</span></button><button class="sw" data-src="img/repsbrothers_1d1190ec.jpg" title="beżowy"><img src="img/repsbrothers_1d1190ec.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/144747170?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1012923810868" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864831178" target="_blank" rel="noopener">Weidian</a> <span class="n">31 zdjęć</span></div></div></article><article class="card" data-usd="15">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439711?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_3f77fc83.jpg" alt="T-shirt z małym czerwonym sercem" loading="lazy"></a>
+<div class="body"><h3>T-shirt z małym czerwonym sercem</h3>
+<div class="price"><b>P15</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_3f77fc83.jpg" title="biały, czerwone logo"><img src="img/repsbrothers_3f77fc83.jpg" alt="biały, czerwone logo" loading="lazy"><span>biały, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_5a9c3a8c.jpg" title="granatowy, czerwone logo"><img src="img/repsbrothers_5a9c3a8c.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_6ec00354.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_6ec00354.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439711?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1007492252102" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864801346" target="_blank" rel="noopener">Weidian</a> <span class="n">14 zdjęć</span></div></div></article><article class="card" data-usd="15">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/225172231?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_3c87bb0f.jpg" alt="T-shirt z małym białym sercem" loading="lazy"></a>
+<div class="body"><h3>T-shirt z małym białym sercem</h3>
+<div class="price"><b>P15</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_3c87bb0f.jpg" title="granatowy, białe logo"><img src="img/repsbrothers_3c87bb0f.jpg" alt="granatowy, białe logo" loading="lazy"><span>granatowy, białe logo</span></button><button class="sw" data-src="img/repsbrothers_51941733.jpg" title="khaki/szarozielony, białe logo"><img src="img/repsbrothers_51941733.jpg" alt="khaki/szarozielony, białe logo" loading="lazy"><span>khaki/szarozielony, białe logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/225172231?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1020772713032" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864868746" target="_blank" rel="noopener">Weidian</a> <span class="n">17 zdjęć</span></div></div></article></div></div></div></section><section id="c4"><h2>Polo</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>4 prod. · ≈ 25–59 $</span></div><div class="grid"><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172682903?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_697c6522.jpg" alt="Polo z małym logo (klasyczne)" loading="lazy"></a>
+<div class="body"><h3>Polo z małym logo (klasyczne)</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (10):</div><div class="sws"><button class="sw" data-src="img/amiparis_697c6522.jpg" title="czarny, czerwone logo"><img src="img/amiparis_697c6522.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_45ae81b5.jpg" title="granatowy, czerwone logo"><img src="img/amiparis_45ae81b5.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_c17adae0.jpg" title="beżowy"><img src="img/amiparis_c17adae0.jpg" alt="beżowy" loading="lazy"><span>beżowy</span></button><button class="sw" data-src="img/amiparis_1cfe0101.jpg" title="khaki"><img src="img/amiparis_1cfe0101.jpg" alt="khaki" loading="lazy"><span>khaki</span></button><button class="sw" data-src="img/amiparis_c754ff28.jpg" title="zielony butelkowy, czerwone logo"><img src="img/amiparis_c754ff28.jpg" alt="zielony butelkowy, czerwone logo" loading="lazy"><span>zielony butelkowy, czerwone logo</span></button><button class="sw" data-src="img/amiparis_1a5a79fa.jpg" title="miętowy"><img src="img/amiparis_1a5a79fa.jpg" alt="miętowy" loading="lazy"><span>miętowy</span></button><button class="sw" data-src="img/amiparis_47b7e45b.jpg" title="biały"><img src="img/amiparis_47b7e45b.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_478b1b7e.jpg" title="szary melanż"><img src="img/amiparis_478b1b7e.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_826f5c8a.jpg" title="niebieski, czerwone logo"><img src="img/amiparis_826f5c8a.jpg" alt="niebieski, czerwone logo" loading="lazy"><span>niebieski, czerwone logo</span></button><button class="sw" data-src="img/amiparis_fc4aa9e8.jpg" title="szaroniebieski"><img src="img/amiparis_fc4aa9e8.jpg" alt="szaroniebieski" loading="lazy"><span>szaroniebieski</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172682903?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=700520731295" target="_blank" rel="noopener">Taobao</a> <span class="n">113 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/189651927?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_1a28c3c7.jpg" alt="Polo z białą naszywką (2025)" loading="lazy"></a>
+<div class="body"><h3>Polo z białą naszywką (2025)</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/amiparis_1a28c3c7.jpg" title="granatowy"><img src="img/amiparis_1a28c3c7.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_6c892f90.jpg" title="khaki/szarooliwkowy"><img src="img/amiparis_6c892f90.jpg" alt="khaki/szarooliwkowy" loading="lazy"><span>khaki/szarooliwkowy</span></button><button class="sw" data-src="img/amiparis_d91d842a.jpg" title="czarny"><img src="img/amiparis_d91d842a.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/189651927?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=907712907117" target="_blank" rel="noopener">Taobao</a> <span class="n">73 zdjęć</span></div></div></article><article class="card" data-usd="25">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226124707?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_80e5e708.jpg" alt="Polo z małym czarnym sercem (2026)" loading="lazy"></a>
+<div class="body"><h3>Polo z małym czarnym sercem (2026)</h3>
+<div class="price"><b>180 CNY</b> <span class="usd">≈ 25 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (5):</div><div class="sws"><button class="sw" data-src="img/amiparis_6db627cc.jpg" title="biały, czarne logo"><img src="img/amiparis_6db627cc.jpg" alt="biały, czarne logo" loading="lazy"><span>biały, czarne logo</span></button><button class="sw" data-src="img/amiparis_80e5e708.jpg" title="szary melanż, czarne logo"><img src="img/amiparis_80e5e708.jpg" alt="szary melanż, czarne logo" loading="lazy"><span>szary melanż, czarne logo</span></button><button class="sw" data-src="img/amiparis_833f8789.jpg" title="jasnoniebieski"><img src="img/amiparis_833f8789.jpg" alt="jasnoniebieski" loading="lazy"><span>jasnoniebieski</span></button><button class="sw" data-src="img/amiparis_5ce492bbda.jpg" title="niebieski szary (stalowy)"><img src="img/amiparis_5ce492bbda.jpg" alt="niebieski szary (stalowy)" loading="lazy"><span>niebieski szary (stalowy)</span></button><button class="sw" data-src="img/amiparis_5bf1bb00.jpg" title="khaki/oliwkowy"><img src="img/amiparis_5bf1bb00.jpg" alt="khaki/oliwkowy" loading="lazy"><span>khaki/oliwkowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226124707?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1048644575190" target="_blank" rel="noopener">Taobao</a> <span class="n">47 zdjęć</span></div></div></article><article class="card" data-usd="59">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173222489?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_e4a84060.jpg" alt="Polo z dzianiny na guziki" loading="lazy"></a>
+<div class="body"><h3>Polo z dzianiny na guziki</h3>
+<div class="price"><b>420 CNY</b> <span class="usd">≈ 59 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_e4a84060.jpg" title="czarny, czerwone serce"><img src="img/amiparis_e4a84060.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_f9122a3b.jpg" title="granatowy, czerwone serce"><img src="img/amiparis_f9122a3b.jpg" alt="granatowy, czerwone serce" loading="lazy"><span>granatowy, czerwone serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173222489?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=779652898394" target="_blank" rel="noopener">Taobao</a> <span class="n">35 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>1 prod. · 17 P</span></div><div class="grid"><article class="card" data-usd="17">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/220439652?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_19dd6145.jpg" alt="Polo AMI" loading="lazy"></a>
+<div class="body"><h3>Polo AMI</h3>
+<div class="price"><b>P17</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_19dd6145.jpg" title="granatowy, czerwone logo"><img src="img/repsbrothers_19dd6145.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_f2435553.jpg" title="biały, czerwone logo"><img src="img/repsbrothers_f2435553.jpg" alt="biały, czerwone logo" loading="lazy"><span>biały, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_3d073668.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_3d073668.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/220439652?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1006746685493" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7861764887" target="_blank" rel="noopener">Weidian</a> <span class="n">17 zdjęć</span></div></div></article></div></div></div></section><section id="c5"><h2>Koszule</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>6 prod. · ≈ 37 $</span></div><div class="grid"><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172695604?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_d2fdc19a.jpg" alt="Koszula z małym logo" loading="lazy"></a>
+<div class="body"><h3>Koszula z małym logo</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_d2fdc19a.jpg" title="biały"><img src="img/amiparis_d2fdc19a.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_cdc9bdaa.jpg" title="błękitny"><img src="img/amiparis_cdc9bdaa.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172695604?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=699808872481" target="_blank" rel="noopener">Taobao</a> <span class="n">35 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173067364?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_698da7b6.jpg" alt="Koszula w paski z sercem" loading="lazy"></a>
+<div class="body"><h3>Koszula w paski z sercem</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_698da7b6.jpg" title="błękitny w paski"><img src="img/amiparis_698da7b6.jpg" alt="błękitny w paski" loading="lazy"><span>błękitny w paski</span></button><button class="sw" data-src="img/amiparis_98818f24.jpg" title="szary w paski"><img src="img/amiparis_98818f24.jpg" alt="szary w paski" loading="lazy"><span>szary w paski</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173067364?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=728191780732" target="_blank" rel="noopener">Taobao</a> <span class="n">51 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173281888?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_6bb643f2.jpg" alt="Koszula z krótkim rękawem" loading="lazy"></a>
+<div class="body"><h3>Koszula z krótkim rękawem</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> bawełna</div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_6bb643f2.jpg" title="biały"><img src="img/amiparis_6bb643f2.jpg" alt="biały" loading="lazy"><span>biały</span></button><button class="sw" data-src="img/amiparis_0f659e66.jpg" title="błękitny"><img src="img/amiparis_0f659e66.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173281888?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=827789264633" target="_blank" rel="noopener">Taobao</a> <span class="n">45 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173285234?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_552581f7.jpg" alt="Koszula z krótkim rękawem z kieszonką" loading="lazy"></a>
+<div class="body"><h3>Koszula z krótkim rękawem z kieszonką</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_552581f7.jpg" title="piaskowy/beżowy"><img src="img/amiparis_552581f7.jpg" alt="piaskowy/beżowy" loading="lazy"><span>piaskowy/beżowy</span></button><button class="sw" data-src="img/amiparis_ee8610c7.jpg" title="jasnoszaroniebieski"><img src="img/amiparis_ee8610c7.jpg" alt="jasnoszaroniebieski" loading="lazy"><span>jasnoszaroniebieski</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173285234?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=827257947643" target="_blank" rel="noopener">Taobao</a> <span class="n">37 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173686326?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_54fc2f8d.jpg" alt="Koszula jeansowa vintage (2024)" loading="lazy"></a>
+<div class="body"><h3>Koszula jeansowa vintage (2024)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> denim</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_54fc2f8d.jpg" title="jasnoniebieski jeans"><img src="img/amiparis_54fc2f8d.jpg" alt="jasnoniebieski jeans" loading="lazy"><span>jasnoniebieski jeans</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173686326?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=830973448090" target="_blank" rel="noopener">Taobao</a> <span class="n">25 zdjęć</span></div></div></article><article class="card" data-usd="9999">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/226126728?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_472b342c.jpg" alt="Koszula oxford z małym czarnym sercem" loading="lazy"></a>
+<div class="body"><h3>Koszula oxford z małym czarnym sercem</h3>
+<div class="price"><b>brak ceny</b> </div>
+<div class="pre">w produkcji</div>
+<div class="comp"><span>Skład:</span> oxford (bawełna)</div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_472b342c.jpg" title="błękitny"><img src="img/amiparis_472b342c.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_d04d7b96.jpg" title="biały"><img src="img/amiparis_d04d7b96.jpg" alt="biały" loading="lazy"><span>biały</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/226126728?uid=1" target="_blank" rel="noopener">Yupoo</a> <span class="n">20 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>0 prod. · —</span></div><div class="grid"><p class="none">Brak w tej kategorii</p></div></div></div></section><section id="c6"><h2>Kurtki</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>3 prod. · ≈ 42–65 $</span></div><div class="grid"><article class="card" data-usd="42">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173219735?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_3452754b.jpg" alt="Kurtka z małym sercem" loading="lazy"></a>
+<div class="body"><h3>Kurtka z małym sercem</h3>
+<div class="price"><b>300 CNY</b> <span class="usd">≈ 42 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_3452754b.jpg" title="granatowy"><img src="img/amiparis_3452754b.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_2bd00a10.jpg" title="czarny"><img src="img/amiparis_2bd00a10.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173219735?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=779680321492" target="_blank" rel="noopener">Taobao</a> <span class="n">45 zdjęć</span></div></div></article><article class="card" data-usd="42">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/174143847?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_84297a9a.jpg" alt="Kurtka z metalowym sercem" loading="lazy"></a>
+<div class="body"><h3>Kurtka z metalowym sercem</h3>
+<div class="price"><b>300 CNY</b> <span class="usd">≈ 42 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_84297a9a.jpg" title="czarny"><img src="img/amiparis_84297a9a.jpg" alt="czarny" loading="lazy"><span>czarny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/174143847?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=832235489608" target="_blank" rel="noopener">Taobao</a> <span class="n">71 zdjęć</span></div></div></article><article class="card" data-usd="65">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/174143615?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_26211798.jpg" alt="Kurtka na zamek z kołnierzem" loading="lazy"></a>
+<div class="body"><h3>Kurtka na zamek z kołnierzem</h3>
+<div class="price"><b>460 CNY</b> <span class="usd">≈ 65 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_26211798.jpg" title="czarny"><img src="img/amiparis_26211798.jpg" alt="czarny" loading="lazy"><span>czarny</span></button><button class="sw" data-src="img/amiparis_634d2502.jpg" title="granatowy"><img src="img/amiparis_634d2502.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/174143615?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1001904837935" target="_blank" rel="noopener">Taobao</a> <span class="n">41 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>0 prod. · —</span></div><div class="grid"><p class="none">Brak w tej kategorii</p></div></div></div></section><section id="c7"><h2>Spodnie i szorty</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>5 prod. · ≈ 21–37 $</span></div><div class="grid"><article class="card" data-usd="21">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173062438?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_a71f6ab9.jpg" alt="Spodenki 3/4 ze średnim logo (150 CNY)" loading="lazy"></a>
+<div class="body"><h3>Spodenki 3/4 ze średnim logo (150 CNY)</h3>
+<div class="price"><b>150 CNY</b> <span class="usd">≈ 21 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_a71f6ab9.jpg" title="błękitny"><img src="img/amiparis_a71f6ab9.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button><button class="sw" data-src="img/amiparis_49d66efc.jpg" title="czarny, czerwone logo"><img src="img/amiparis_49d66efc.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173062438?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=710360884236" target="_blank" rel="noopener">Taobao</a> <span class="n">38 zdjęć</span></div></div></article><article class="card" data-usd="23">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/174124881?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_e9dcbcc1.jpg" alt="Szorty kąpielowe z małym logo" loading="lazy"></a>
+<div class="body"><h3>Szorty kąpielowe z małym logo</h3>
+<div class="price"><b>160 CNY</b> <span class="usd">≈ 23 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_e9dcbcc1.jpg" title="czarny, czerwone serce"><img src="img/amiparis_e9dcbcc1.jpg" alt="czarny, czerwone serce" loading="lazy"><span>czarny, czerwone serce</span></button><button class="sw" data-src="img/amiparis_628cfff6.jpg" title="granatowy, czerwone serce"><img src="img/amiparis_628cfff6.jpg" alt="granatowy, czerwone serce" loading="lazy"><span>granatowy, czerwone serce</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/174124881?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=710355476266" target="_blank" rel="noopener">Taobao</a> <span class="n">43 zdjęć</span></div></div></article><article class="card" data-usd="28">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/174144301?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_f5052d0fea.jpg" alt="Jeansy z metalowym sercem" loading="lazy"></a>
+<div class="body"><h3>Jeansy z metalowym sercem</h3>
+<div class="price"><b>200 CNY</b> <span class="usd">≈ 28 $</span></div>
+
+<div class="comp"><span>Skład:</span> denim</div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_f5052d0fea.jpg" title="jasnoniebieski jeans"><img src="img/amiparis_f5052d0fea.jpg" alt="jasnoniebieski jeans" loading="lazy"><span>jasnoniebieski jeans</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/174144301?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=831716182577" target="_blank" rel="noopener">Taobao</a> <span class="n">39 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172867323?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_5989380b.jpg" alt="Spodenki 3/4 ze średnim logo (260 CNY)" loading="lazy"></a>
+<div class="body"><h3>Spodenki 3/4 ze średnim logo (260 CNY)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/amiparis_5989380b.jpg" title="czarny, czerwone logo"><img src="img/amiparis_5989380b.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_003a38ae.jpg" title="granatowy"><img src="img/amiparis_003a38ae.jpg" alt="granatowy" loading="lazy"><span>granatowy</span></button><button class="sw" data-src="img/amiparis_be9cd0ab.jpg" title="szary melanż"><img src="img/amiparis_be9cd0ab.jpg" alt="szary melanż" loading="lazy"><span>szary melanż</span></button><button class="sw" data-src="img/amiparis_84e390bca8.jpg" title="błękitny"><img src="img/amiparis_84e390bca8.jpg" alt="błękitny" loading="lazy"><span>błękitny</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172867323?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=803234343330" target="_blank" rel="noopener">Taobao</a> <span class="n">38 zdjęć</span></div></div></article><article class="card" data-usd="37">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173040382?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_225cf6d8.jpg" alt="Spodnie dresowe (klasyczne)" loading="lazy"></a>
+<div class="body"><h3>Spodnie dresowe (klasyczne)</h3>
+<div class="price"><b>260 CNY</b> <span class="usd">≈ 37 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_225cf6d8.jpg" title="czarny, czerwone logo"><img src="img/amiparis_225cf6d8.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_01d5296d.jpg" title="szary melanż, czerwone logo"><img src="img/amiparis_01d5296d.jpg" alt="szary melanż, czerwone logo" loading="lazy"><span>szary melanż, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173040382?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=754851835841" target="_blank" rel="noopener">Taobao</a> <span class="n">31 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>0 prod. · —</span></div><div class="grid"><p class="none">Brak w tej kategorii</p></div></div></div></section><section id="c8"><h2>Czapki i szaliki</h2>
+<div class="cmp"><div class="col"><div class="colh">AMI Paris (TOPAMI) <span>3 prod. · ≈ 11–17 $</span></div><div class="grid"><article class="card" data-usd="11">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/190982340?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_fc36d34be0.jpg" alt="Czapka z daszkiem z metalowym logo" loading="lazy"></a>
+<div class="body"><h3>Czapka z daszkiem z metalowym logo</h3>
+<div class="price"><b>80 CNY</b> <span class="usd">≈ 11 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_fc36d34be0.jpg" title="czarny/grafitowy"><img src="img/amiparis_fc36d34be0.jpg" alt="czarny/grafitowy" loading="lazy"><span>czarny/grafitowy</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/190982340?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=944276106135" target="_blank" rel="noopener">Taobao</a> <span class="n">24 zdjęć</span></div></div></article><article class="card" data-usd="17">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/172736396?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_002de898.jpg" alt="Czapka wełniana z sercem" loading="lazy"></a>
+<div class="body"><h3>Czapka wełniana z sercem</h3>
+<div class="price"><b>120 CNY</b> <span class="usd">≈ 17 $</span></div>
+
+<div class="comp"><span>Skład:</span> wełna</div>
+<div class="cl">Kolory (2):</div><div class="sws"><button class="sw" data-src="img/amiparis_002de898.jpg" title="czarny, czerwone logo"><img src="img/amiparis_002de898.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/amiparis_e4188630.jpg" title="szary grafitowy, czerwone logo"><img src="img/amiparis_e4188630.jpg" alt="szary grafitowy, czerwone logo" loading="lazy"><span>szary grafitowy, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/172736396?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=750055104878" target="_blank" rel="noopener">Taobao</a> <span class="n">30 zdjęć</span></div></div></article><article class="card" data-usd="17">
+<a class="ph" href="https://amiparis.x.yupoo.com/albums/173064741?uid=1" target="_blank" rel="noopener"><img class="main" src="img/amiparis_04ad1bc2c6.jpg" alt="Czapka z daszkiem z sercem" loading="lazy"></a>
+<div class="body"><h3>Czapka z daszkiem z sercem</h3>
+<div class="price"><b>120 CNY</b> <span class="usd">≈ 17 $</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (1):</div><div class="sws"><button class="sw" data-src="img/amiparis_04ad1bc2c6.jpg" title="czarny, czerwone logo"><img src="img/amiparis_04ad1bc2c6.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button></div>
+<div class="links"><a href="https://amiparis.x.yupoo.com/albums/173064741?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=710347172689" target="_blank" rel="noopener">Taobao</a> <span class="n">31 zdjęć</span></div></div></article></div></div>
+<div class="col"><div class="colh rb">RepsBrothers <span>3 prod. · 15–16 P</span></div><div class="grid"><article class="card" data-usd="15">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/235224022?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_0ae6c84a48.jpg" alt="Czapka z mieszanki wełny" loading="lazy"></a>
+<div class="body"><h3>Czapka z mieszanki wełny</h3>
+<div class="price"><b>P15</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> mieszanka wełny</div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_0ae6c84a48.jpg" title="grafitowy szary"><img src="img/repsbrothers_0ae6c84a48.jpg" alt="grafitowy szary" loading="lazy"><span>grafitowy szary</span></button><button class="sw" data-src="img/repsbrothers_9b0dda2ebf.jpg" title="lawendowy"><img src="img/repsbrothers_9b0dda2ebf.jpg" alt="lawendowy" loading="lazy"><span>lawendowy</span></button><button class="sw" data-src="img/repsbrothers_34d9f3e901.jpg" title="żółty"><img src="img/repsbrothers_34d9f3e901.jpg" alt="żółty" loading="lazy"><span>żółty</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/235224022?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1048467316342" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7861769517" target="_blank" rel="noopener">Weidian</a> <span class="n">9 zdjęć</span></div></div></article><article class="card" data-usd="15">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/235224999?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_d7f406c10e.jpg" alt="Czapka wełniana" loading="lazy"></a>
+<div class="body"><h3>Czapka wełniana</h3>
+<div class="price"><b>P15</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> wełna</div>
+<div class="cl">Kolory (4):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_3eb72305b5.jpg" title="czarny, czerwone logo"><img src="img/repsbrothers_3eb72305b5.jpg" alt="czarny, czerwone logo" loading="lazy"><span>czarny, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_d7f406c10e.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_d7f406c10e.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_3fc54c60f6.jpg" title="niebieski melanż, czerwone logo"><img src="img/repsbrothers_3fc54c60f6.jpg" alt="niebieski melanż, czerwone logo" loading="lazy"><span>niebieski melanż, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_ca4f908561.jpg" title="szary melanż, czerwone logo"><img src="img/repsbrothers_ca4f908561.jpg" alt="szary melanż, czerwone logo" loading="lazy"><span>szary melanż, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/235224999?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1046623778111" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864874728" target="_blank" rel="noopener">Weidian</a> <span class="n">13 zdjęć</span></div></div></article><article class="card" data-usd="16">
+<a class="ph" href="https://repsbrothers.x.yupoo.com/albums/222715283?uid=1" target="_blank" rel="noopener"><img class="main" src="img/repsbrothers_cd9e3ad6.jpg" alt="Szalik" loading="lazy"></a>
+<div class="body"><h3>Szalik</h3>
+<div class="price"><b>P16</b> <span class="usd">≈ USD?</span></div>
+
+<div class="comp"><span>Skład:</span> <i>nie podano</i></div>
+<div class="cl">Kolory (3):</div><div class="sws"><button class="sw" data-src="img/repsbrothers_cd9e3ad6.jpg" title="ecru, czerwone logo"><img src="img/repsbrothers_cd9e3ad6.jpg" alt="ecru, czerwone logo" loading="lazy"><span>ecru, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_63c52ca2.jpg" title="granatowy, czerwone logo"><img src="img/repsbrothers_63c52ca2.jpg" alt="granatowy, czerwone logo" loading="lazy"><span>granatowy, czerwone logo</span></button><button class="sw" data-src="img/repsbrothers_5f4bda15.jpg" title="szary melanż, czerwone logo"><img src="img/repsbrothers_5f4bda15.jpg" alt="szary melanż, czerwone logo" loading="lazy"><span>szary melanż, czerwone logo</span></button></div>
+<div class="links"><a href="https://repsbrothers.x.yupoo.com/albums/222715283?uid=1" target="_blank" rel="noopener">Yupoo</a><a href="https://item.taobao.com/item.htm?id=1011734193743" target="_blank" rel="noopener">Taobao</a><a href="https://weidian.com/item.html?itemID=7864848958" target="_blank" rel="noopener">Weidian</a> <span class="n">16 zdjęć</span></div></div></article></div></div></div></section></main>
+<script>
+document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>{const c=b.closest('.card');c.querySelector('img.main').src=b.dataset.src;c.querySelectorAll('.sw').forEach(x=>x.classList.toggle('on',x===b))}));
+</script></body></html>
