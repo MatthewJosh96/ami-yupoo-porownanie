@@ -8,6 +8,6 @@ Pobierz repozytorium przez **Code → Download ZIP**, rozpakuj cały katalog i o
 
 ## Dostęp
 
-Repozytorium jest prywatne. Właściciel nadaje dostęp przez **Settings → Collaborators → Add people**. Zaproszona osoba musi zaakceptować zaproszenie na GitHubie.
+Repozytorium jest publiczne. Każdy może przeglądać i pobrać pliki bez zaproszenia.
 
 GitHub wyświetla kod pliku HTML; aby zobaczyć stronę, otwórz pobraną kopię lokalnie.
